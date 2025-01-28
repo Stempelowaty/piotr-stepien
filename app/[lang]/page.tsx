@@ -1,3 +1,4 @@
+import AboutMe from "../_components/aboutMe";
 import BgGradient from "../_components/bgGradient";
 import TopBar from "../_components/topBar";
 import Warning from "../_components/warning";
@@ -13,8 +14,8 @@ export default async function Home({
       <Warning lang={lang} />
       <BgGradient />
       <div className="z-20 relative text-foreground">
-        <TopBar />
-        <div className="h-64">fill</div>
+        <TopBar lang={lang} />
+        <AboutMe lang={lang} />
         <div className="h-64">fill</div>
         <div className="h-64">fill</div>
         <div className="h-64">fill</div>

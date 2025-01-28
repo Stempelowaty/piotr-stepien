@@ -1,7 +1,11 @@
 import { Github, Linkedin } from "lucide-react";
 import Link from "next/link";
-
-export default function TopBar() {
+import LangButton from "./langButton";
+interface TopBarProps {
+  lang: string;
+}
+export default function TopBar(props: TopBarProps) {
+  const { lang } = props;
   return (
     <div className="w-full pt-16 pe-16 flex justify-end gap-2 z-30">
       <Link
@@ -16,6 +20,7 @@ export default function TopBar() {
       >
         <Linkedin className="w-8 h-8 text-slate-950 p-1 bg-slate-400 rounded-xl" />
       </Link>
+      <LangButton lang={lang} />
     </div>
   );
 }

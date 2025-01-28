@@ -11,10 +11,10 @@ export function middleware(request: NextRequest) {
     newUrl.pathname = `/${defaultLocale}`;
     return NextResponse.redirect(newUrl);
   }
-
   return NextResponse.next();
 }
 
 export const config = {
-  matcher: "/:path",
+  matcher:
+    "/((?!api|_next/static|_next/image|favicon.ico|sitemap.xml|robots.txt).*)",
 };
