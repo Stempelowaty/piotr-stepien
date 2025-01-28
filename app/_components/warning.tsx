@@ -15,16 +15,16 @@ export default function Warning(props: WarningProps) {
   return (
     <div className="bg-slate-950 font-lexend fixed inset-0 flex flex-col items-center justify-center gap-5 z-50">
       <Construction className="bg-slate-950 w-32 h-32 text-foreground" />
-      <p className="font-bold text-3xl">{dict.stop}</p>
+      <p className="font-bold text-foreground text-3xl">{dict.stop}</p>
       <p>{dict.wip}</p>
       <Link
         href="https://piotr-stepien-newspaper.vercel.app"
-        className="border border-foreground p-2 rounded-xl hover:scale-105 transition duration-500"
+        className="border border-foreground text-foreground p-2 rounded-xl hover:scale-105 transition duration-500"
       >
         {dict.visitOld}
       </Link>
       <button
-        className="border border-foreground p-2 rounded-xl hover:scale-105 transition duration-500"
+        className="border border-foreground text-foreground p-2 rounded-xl hover:scale-105 transition duration-500"
         onClick={() => setIsVisible(false)}
       >
         {dict.show}
