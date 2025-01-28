@@ -17,7 +17,7 @@ export default function BgGradient() {
 
   return (
     <div
-      className="w-full h-full fixed z-0 scale-110"
+      className="w-full h-full fixed z-0"
       style={{
         transform: `translateY(${scrollY * -0.05}px)`,
         background: `
