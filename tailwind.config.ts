@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import tailwindcssAnimated from "tailwindcss-animated";
 
 export default {
   content: [
@@ -8,11 +9,15 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        lexend: ["var(--font-lexend)"],
+        outfit: ["var(--font-outfit)"],
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
     },
   },
-  plugins: [],
+  plugins: [tailwindcssAnimated],
 } satisfies Config;

@@ -4,20 +4,20 @@ import { AvailableLocalesType } from "../utils";
 interface AboutMeProps {
   lang: string;
 }
-export default function AboutMe(props: AboutMeProps) {
-  const { lang } = props;
+export default async function AboutMe(props: AboutMeProps) {
+  const { lang } = await props;
   const dict = getDictionary(lang);
   return (
-    <div className="flex lg:flex-row flex-col-reverse px-32 pt-64 font-lexend">
-      <div className="flex flex-col lg:w-1/2 w-full">
-        <p className="text-7xl pb-2 font-extralight">Piotr Stępień</p>
+    <div className="flex lg:flex-row flex-col-reverse px-32 pt-64 font-outfit">
+      <div className="flex flex-col lg:w-1/2 w-full animate-fade-right animate-once animate-ease-in-out animate-alternate">
+        <p className="text-7xl pb-2 font-thin">Piotr Stępień</p>
         <p className="text-xl">{dict.chapterTitle}</p>
         <p>{dict.chapterOne}</p>
         <p>{dict.chapterTwo}</p>
       </div>
-      <div className="flex justify-center items-center lg:w-1/2 w-full">
+      <div className="flex justify-center items-center lg:w-1/2 w-full ">
         <Image
-          className=" w-128 h-128 object-cover rounded-full z-100"
+          className=" w-128 h-128 object-cover rounded-full z-100 animate-fade-left animate-once animate-ease-in-out animate-alternate"
           width={343}
           height={343}
           src={"/profile_pic.png"}
@@ -29,7 +29,7 @@ export default function AboutMe(props: AboutMeProps) {
 }
 
 const getDictionary = (locale: string) =>
-  dictionaries[locale as AvailableLocalesType];
+  dictionaries[locale as AvailableLocalesType] ?? dictionaries["en-US"];
 
 const dictionaries = {
   "pl-PL": {

@@ -34,7 +34,7 @@ export default function Warning(props: WarningProps) {
 }
 
 const getDictionary = (locale: string) =>
-  dictionaries[locale as AvailableLocalesType];
+  dictionaries[locale as AvailableLocalesType] ?? dictionaries["en-US"];
 
 const dictionaries = {
   "pl-PL": {

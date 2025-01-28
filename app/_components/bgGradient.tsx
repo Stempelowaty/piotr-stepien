@@ -19,7 +19,7 @@ export default function BgGradient() {
     <div
       className="w-full h-full fixed z-0"
       style={{
-        transform: `translateY(${scrollY * -0.05}px)`,
+        transform: `translateY(${scrollY * -0.2}px)`,
         background: `
           linear-gradient(135deg, rgba(255, 0, 0, 0.04), transparent 50%), 
           linear-gradient(to bottom, rgba(255, 255, 255, 0.07), transparent 70%), 

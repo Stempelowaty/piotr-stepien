@@ -9,6 +9,7 @@ export default async function Home({
   params: Promise<{ lang: string }>;
 }) {
   const { lang } = await params;
+  if (!lang) return <></>;
   return (
     <div className="font-lexend w-full h-full bg-slate-950">
       <Warning lang={lang} />
