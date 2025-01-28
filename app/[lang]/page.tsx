@@ -12,7 +12,7 @@ export default async function Home({
     <div className="font-lexend w-full h-full">
       <Warning lang={lang} />
       <BgGradient />
-      <div className="z-20 relative">
+      <div className="z-20 relative text-foreground">
         <TopBar />
         <div className="h-64">fill</div>
         <div className="h-64">fill</div>

@@ -1,7 +1,7 @@
 export default function BgGradient() {
   return (
     <div
-      className="w-full h-full fixed z-0"
+      className="w-full h-full fixed z-0 scale-110"
       style={{
         background: `
             linear-gradient(to right, rgba(255, 0, 0, 0.03), transparent 100%), 
