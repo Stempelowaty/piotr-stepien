@@ -9,7 +9,7 @@ export default async function Home({
 }) {
   const { lang } = await params;
   return (
-    <div className="font-lexend w-full h-full">
+    <div className="font-lexend w-full h-full bg-slate-950">
       <Warning lang={lang} />
       <BgGradient />
       <div className="z-20 relative text-foreground">
