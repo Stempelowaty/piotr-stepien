@@ -1,3 +1,5 @@
+import BgGradient from "../_components/bgGradient";
+import TopBar from "../_components/topBar";
 import Warning from "../_components/warning";
 
 export default async function Home({
@@ -7,8 +9,19 @@ export default async function Home({
 }) {
   const { lang } = await params;
   return (
-    <div>
+    <div className="font-lexend w-full h-full">
       <Warning lang={lang} />
+      <BgGradient />
+      <div className="z-20 relative">
+        <TopBar />
+        <div className="h-64">fill</div>
+        <div className="h-64">fill</div>
+        <div className="h-64">fill</div>
+        <div className="h-64">fill</div>
+        <div className="h-64">fill</div>
+        <div className="h-64">fill</div>
+        <div className="h-64">fill</div>
+      </div>
     </div>
   );
 }

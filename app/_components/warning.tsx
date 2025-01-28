@@ -11,27 +11,24 @@ interface WarningProps {
 export default function Warning(props: WarningProps) {
   const dict = getDictionary(props.lang);
   const [isVisible, setIsVisible] = useState(true);
+  if (!isVisible) return <></>;
   return (
-    <div className="font-lexend">
-      {isVisible && (
-        <div className="w-full mt-64 h-full items-center flex flex-col gap-5">
-          <Construction className="w-32 h-32" />
-          <p className="font-bold text-3xl">{dict.stop}</p>
-          <p>{dict.wip}</p>
-          <Link
-            href={"https://piotr-stepien-newspaper.vercel.app"}
-            className="border border-foreground p-2 rounded-xl hover:scale-105 transition duration-500"
-          >
-            {dict.visitOld}
-          </Link>
-          <button
-            className="border border-foreground p-2 rounded-xl hover:scale-105 transition duration-500"
-            onClick={() => setIsVisible(false)}
-          >
-            {dict.show}
-          </button>
-        </div>
-      )}
+    <div className="bg-slate-950 font-lexend fixed inset-0 flex flex-col items-center justify-center gap-5 z-50">
+      <Construction className="bg-slate-950 w-32 h-32 text-foreground" />
+      <p className="font-bold text-3xl">{dict.stop}</p>
+      <p>{dict.wip}</p>
+      <Link
+        href="https://piotr-stepien-newspaper.vercel.app"
+        className="border border-foreground p-2 rounded-xl hover:scale-105 transition duration-500"
+      >
+        {dict.visitOld}
+      </Link>
+      <button
+        className="border border-foreground p-2 rounded-xl hover:scale-105 transition duration-500"
+        onClick={() => setIsVisible(false)}
+      >
+        {dict.show}
+      </button>
     </div>
   );
 }
