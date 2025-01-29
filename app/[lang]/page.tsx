@@ -13,7 +13,7 @@ export default async function Home({
   if (!lang) return <></>;
   return (
     <div className="font-lexend w-full h-full bg-slate-950">
-      {/* <Warning lang={lang} /> */}
+      <Warning lang={lang} />
       <BgGradient />
       <div className="z-20 relative text-foreground">
         <TopBar lang={lang} />

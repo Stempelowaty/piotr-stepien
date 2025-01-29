@@ -1,5 +1,4 @@
 import { AvailableLocalesType } from "../utils";
-import ShowOnScroll from "./showOnScroll";
 
 interface AboutMeProps {
   lang: string;
@@ -9,16 +8,14 @@ export default function AboutMe(props: AboutMeProps) {
 
   return (
     <div className="font-lexend text-foreground flex flex-col items-center mt-96 px-32 xl:px-64">
-      <ShowOnScroll>
-        <h1 className="bg-gradient-to-r from-cyan-300 to-white bg-clip-text text-transparent text-4xl pt-16">
-          {dict.about}
-        </h1>
-        <h2 className="text-2xl font-thin">{dict.chapterTitle}</h2>
-        <div className="text-center flex flex-col items-center">
-          <p>{dict.chapterOne}</p>
-          <p>{dict.chapterTwo}</p>
-        </div>
-      </ShowOnScroll>
+      <h1 className="bg-gradient-to-r from-cyan-300 to-white bg-clip-text text-transparent text-4xl pt-16">
+        {dict.about}
+      </h1>
+      <h2 className="text-2xl font-thin">{dict.chapterTitle}</h2>
+      <div className="text-center flex flex-col items-center">
+        <p>{dict.chapterOne}</p>
+        <p>{dict.chapterTwo}</p>
+      </div>
     </div>
   );
 }
