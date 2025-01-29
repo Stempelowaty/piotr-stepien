@@ -33,20 +33,20 @@ export default function Warning(props: WarningProps) {
   );
 }
 
-const getDictionary = (locale: string) =>
-  dictionaries[locale as AvailableLocalesType] ?? dictionaries["en-US"];
-
-const dictionaries = {
-  "pl-PL": {
-    stop: "STOP",
-    wip: "Nowe portfolio w trakcie pracy.",
-    visitOld: "Poprzednie dostępne jest tutaj",
-    show: "Chcę zobaczyć tą pracę!",
-  },
-  "en-US": {
-    stop: "STOP",
-    wip: "New portfolio website is under construction.",
-    visitOld: "The legacy portfolio is available here",
-    show: "I want to see this one!",
-  },
+const getDictionary = (locale: string) => {
+  const dictionaries = {
+    "pl-PL": {
+      stop: "STOP",
+      wip: "Nowe portfolio w trakcie pracy.",
+      visitOld: "Poprzednie dostępne jest tutaj",
+      show: "Chcę zobaczyć tą pracę!",
+    },
+    "en-US": {
+      stop: "STOP",
+      wip: "New portfolio website is under construction.",
+      visitOld: "The legacy portfolio is available here",
+      show: "I want to see this one!",
+    },
+  };
+  return dictionaries[locale as AvailableLocalesType] ?? dictionaries["en-US"];
 };

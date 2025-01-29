@@ -5,13 +5,11 @@ import "./globals.css";
 
 const lexend = Lexend({
   subsets: ["latin"],
-  weight: "300",
   variable: "--font-lexend",
 });
 
 const outfit = Outfit({
   subsets: ["latin"],
-  weight: "300",
   variable: "--font-outfit",
 });
 

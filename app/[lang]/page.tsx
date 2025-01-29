@@ -1,7 +1,8 @@
-import AboutMe from "../_components/aboutMe";
+import Header from "../_components/header";
 import BgGradient from "../_components/bgGradient";
 import TopBar from "../_components/topBar";
 import Warning from "../_components/warning";
+import AboutMe from "../_components/aboutMe";
 
 export default async function Home({
   params,
@@ -12,35 +13,12 @@ export default async function Home({
   if (!lang) return <></>;
   return (
     <div className="font-lexend w-full h-full bg-slate-950">
-      <Warning lang={lang} />
+      {/* <Warning lang={lang} /> */}
       <BgGradient />
       <div className="z-20 relative text-foreground">
         <TopBar lang={lang} />
+        <Header lang={lang} />
         <AboutMe lang={lang} />
-        <div className="h-64">fill</div>
-        <div className="h-64">fill</div>
-        <div className="h-64">fill</div>
-        <div className="h-64">fill</div>
-        <div className="h-64">fill</div>
-        <div className="h-64">fill</div>
-        <div className="h-64">fill</div>
-        <div className="h-64">fill</div>
-        <div className="h-64">fill</div>
-        <div className="h-64">fill</div>
-        <div className="h-64">fill</div>
-        <div className="h-64">fill</div>
-        <div className="h-64">fill</div>
-        <div className="h-64">fill</div>
-        <div className="h-64">fill</div>
-        <div className="h-64">fill</div>
-        <div className="h-64">fill</div>
-        <div className="h-64">fill</div>
-        <div className="h-64">fill</div>
-        <div className="h-64">fill</div>
-        <div className="h-64">fill</div>
-        <div className="h-64">fill</div>
-        <div className="h-64">fill</div>
-        <div className="h-64">fill</div>
       </div>
     </div>
   );
