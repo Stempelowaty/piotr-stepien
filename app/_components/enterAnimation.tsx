@@ -28,10 +28,14 @@ export default function EnterAnimation(props: EnterAnimationProps) {
         </motion.div>
       ) : (
         <motion.div
-          initial={{ opacity: 0, x: 0, y: 25 }}
+          initial={{
+            opacity: 0,
+            x: horizontal === "toLeft" ? -100 : 100,
+            y: 25,
+          }}
           whileInView={{
             opacity: 1,
-            x: horizontal === "toLeft" ? -100 : 100,
+            x: 0,
             y: 0,
           }}
           transition={{ type: "spring", stiffness: 100 }}

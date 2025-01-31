@@ -27,8 +27,8 @@ export default function Technologies(props: TechnologiesProps) {
             }}
             viewport={{ once: true, amount: 0.5 }}
           >
-            <div className="text-2xl p-2 rounded-lg">
-              <div className="aspect-square w-24 rounded-lg p-1 bg-slate-700 animate-wiggle animate-infinite animate-duration-[3000ms] animate-ease-in-out">
+            <div className="text-center text-sm p-2 rounded-lg animate-wiggle animate-infinite animate-duration-[3000ms] animate-ease-in-out">
+              <div className="aspect-square w-24 rounded-lg p-1 bg-slate-700 ">
                 <Image
                   className="w-full"
                   width={128}
@@ -37,6 +37,7 @@ export default function Technologies(props: TechnologiesProps) {
                   alt=""
                 />
               </div>
+              {dict[`${i + 1}` as keyof typeof dict]}
             </div>
           </EnterAnimation>
         ))}

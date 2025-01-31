@@ -41,7 +41,7 @@ const getDictionary = (locale: string) => {
       about: "About me",
       chapterTitle: "Who is this charming fellow?",
       chapterOne:
-        "I don't know if charming is the right word, but that's me over to the right. I have always been fascinated by video games. After modding Skyrim for twice as long as I've played it and dissecting the first Doom games, I decided to become a software developer. While studying for my engineering degree, I developed a variety of game projects using various frameworks.",
+        "I don't know if charming is the right word, but that's me up there. I have always been fascinated by video games. After modding Skyrim for twice as long as I've played it and dissecting the first Doom games, I decided to become a software developer. While studying for my engineering degree, I developed a variety of game projects using various frameworks.",
       chapterTwo:
         "My passion for programming expanded into other technologies, and after a while, I landed my first job as a full-stack developer. There, I learned about React and other quirky terms that sound like names for Pokémon.",
     },
