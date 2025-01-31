@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { AvailableLocalesType } from "../utils";
+import { AvailableLocalesType } from "@/app/utils";
 import Link from "next/link";
 import { Construction } from "lucide-react";
 

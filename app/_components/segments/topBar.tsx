@@ -1,6 +1,6 @@
 import { Github, Linkedin } from "lucide-react";
 import Link from "next/link";
-import LangButton from "./langButton";
+import LangButton from "@/app/_components/langButton";
 interface TopBarProps {
   lang: string;
 }
@@ -13,13 +13,13 @@ export default function TopBar(props: TopBarProps) {
           href={"https://github.com/Stempelowaty"}
           className="hover:scale-110 transition duration-500"
         >
-          <Github className="w-8 h-8 text-slate-950 p-1 bg-slate-300 rounded-xl" />
+          <Github className="w-8 h-8 text-slate-950 p-1 bg-gradient-to-br from-cyan-500 via-cyan-200 to-slate-300 rounded-xl" />
         </Link>
         <Link
           href={"https://www.linkedin.com/in/piotr-stepien-2169bb223/"}
           className="hover:scale-110 transition duration-500"
         >
-          <Linkedin className="w-8 h-8 text-slate-950 p-1 bg-slate-300 rounded-xl" />
+          <Linkedin className="w-8 h-8 text-slate-950 p-1 bg-gradient-to-br from-cyan-500 via-cyan-200 to-slate-300 rounded-xl" />
         </Link>
       </div>
       <LangButton lang={lang} />

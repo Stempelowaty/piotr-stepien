@@ -21,11 +21,11 @@ export default function BgGradient() {
       style={{
         transform: `translateY(${scrollY * -0.2}px)`,
         background: `
-          linear-gradient(135deg, rgba(255, 0, 0, 0.04), transparent 50%), 
+          linear-gradient(135deg, rgba(0, 225, 255, 0.08), transparent 50%), 
           linear-gradient(to bottom, rgba(255, 255, 255, 0.07), transparent 70%), 
           linear-gradient(to top, rgba(2, 6, 24, 1), transparent 70%), 
-          repeating-linear-gradient(0deg, transparent, transparent 63px, rgba(255, 255, 255, 0.03) 64px),
-          repeating-linear-gradient(90deg, transparent, transparent 63px, rgba(255, 255, 255, 0.03) 64px), #020618
+          repeating-linear-gradient(0deg, transparent, transparent 63px, rgba(255, 255, 255, 0.05) 64px),
+          repeating-linear-gradient(90deg, transparent, transparent 63px, rgba(255, 255, 255, 0.05) 64px), #020618
         `,
       }}
     ></div>
