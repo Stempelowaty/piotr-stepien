@@ -28,7 +28,7 @@ export default async function Header(props: AboutMeProps) {
           whileInView={{ opacity: 1, x: 0, y: 0 }}
           transition={{ ease: "easeOut", duration: 0.75, delay: 0.5 }}
         >
-          <p className="bg-gradient-to-r from-cyan-300 to-white bg-clip-text text-transparent text-2xl pt-8">
+          <p className="bg-gradient-to-r from-cyan-300 to-white bg-clip-text text-transparent text-2xl pt-8 lg:text-start text-center">
             Fullstack Developer
           </p>
         </EnterAnimation>
@@ -37,7 +37,9 @@ export default async function Header(props: AboutMeProps) {
           whileInView={{ opacity: 1, x: 0, y: 0 }}
           transition={{ ease: "easeOut", duration: 0.75, delay: 0.75 }}
         >
-          <p className="text-lg pt-2">{dict.withExp}</p>
+          <p className="text-lg pt-2 lg:text-start text-center">
+            {dict.withExp}
+          </p>
         </EnterAnimation>
       </div>
       <EnterAnimation

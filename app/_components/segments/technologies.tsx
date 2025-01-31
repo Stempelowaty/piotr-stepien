@@ -8,7 +8,7 @@ interface TechnologiesProps {
 export default function Technologies(props: TechnologiesProps) {
   const dict = getDictionary(props.lang);
   return (
-    <div className="font-lexend text-foreground flex flex-col items-center py-32 px-32 xl:px-64">
+    <div className="font-lexend text-foreground flex flex-col items-center py-32 px-8 md:px-32 xl:px-64">
       <EnterAnimation isDefault>
         <h1 className="bg-gradient-to-r from-cyan-300 to-white bg-clip-text text-transparent text-4xl pt-16">
           {dict.tech}
@@ -23,7 +23,7 @@ export default function Technologies(props: TechnologiesProps) {
             transition={{
               type: "spring",
               stiffness: 100,
-              delay: (i % 6) / 10,
+              delay: i / 10,
             }}
             viewport={{ once: true, amount: 0.5 }}
           >
