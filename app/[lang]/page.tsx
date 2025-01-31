@@ -5,6 +5,7 @@ import TopBar from "../_components/segments/topBar";
 import AboutMe from "../_components/segments/aboutMe";
 import Technologies from "../_components/segments/technologies";
 import Experience from "../_components/segments/experience";
+import Projects from "../_components/segments/projects";
 
 export default async function Home({
   params,
@@ -22,6 +23,7 @@ export default async function Home({
         <AboutMe lang={lang} />
         <Technologies lang={lang} />
         <Experience lang={lang} />
+        <Projects lang={lang} />
       </div>
     </div>
   );
