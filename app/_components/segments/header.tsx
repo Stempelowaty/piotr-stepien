@@ -9,17 +9,20 @@ export default async function Header(props: AboutMeProps) {
   const { lang } = await props;
   const dict = getDictionary(lang);
   return (
-    <div className="flex lg:flex-row flex-col-reverse xl:px-64 px-32 pt-32 font-outfit">
-      <div className="flex flex-col lg:w-1/3 items-center lg:items-start w-full">
+    <div className="flex lg:flex-row flex-col-reverse px-32 pt-32 font-outfit">
+      <div className="flex flex-col lg:w-1/2 py-32 items-center lg:items-start w-full">
         <EnterAnimation
           initial={{ opacity: 0, x: -100, y: 0 }}
           whileInView={{ opacity: 1, x: 0, y: 0 }}
           transition={{ ease: "easeOut", duration: 0.75, delay: 0.25 }}
         >
           <p className="text-8xl mb-2 font-thin text-center lg:text-start">
-            Piotr Stępień
+            Piotr
           </p>
-        </EnterAnimation>{" "}
+          <p className="text-8xl mb-2 font-thin text-center lg:text-start">
+            Stępień
+          </p>
+        </EnterAnimation>
         <EnterAnimation
           initial={{ opacity: 0, x: -100, y: 0 }}
           whileInView={{ opacity: 1, x: 0, y: 0 }}
@@ -41,15 +44,17 @@ export default async function Header(props: AboutMeProps) {
         initial={{ opacity: 0, x: 100, y: 0 }}
         whileInView={{ opacity: 1, x: 0, y: 0 }}
         transition={{ ease: "easeOut", duration: 0.75 }}
-        className="flex justify-center lg:justify-end items-center lg:w-2/3 w-full"
+        className="flex justify-center items-center lg:w-1/2 w-full"
       >
-        <Image
-          className="object-cover rounded-full z-100"
-          width={343}
-          height={343}
-          src={"/profile_pic.png"}
-          alt=""
-        />
+        <div className="aspect-square w-full max-w-[600px] rounded-full p-1 bg-gradient-to-br from-cyan-500 via-cyan-200 to-slate-300">
+          <Image
+            className="rounded-full z-100 w-full "
+            width={343}
+            height={343}
+            src={"/profile_pic.png"}
+            alt=""
+          />
+        </div>
       </EnterAnimation>
     </div>
   );
