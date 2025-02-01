@@ -25,7 +25,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${lexend.variable} ${outfit.variable} antialiased`}>
+      <body
+        className={`${lexend.variable} ${outfit.variable} antialiased bg-slate-950`}
+      >
         {children}
       </body>
     </html>

@@ -39,21 +39,24 @@ export default function Projects(props: ProjectsProps) {
               className="w-full"
             >
               <div className="flex gap-4 flex-col md:flex-row items-center justify-center md:justify-start">
-                <Link
-                  href={dict[`link${i + 1}` as keyof typeof dict]}
-                  className="flex items-center gap-1 hover:scale-105 duration-500 transition underline"
-                >
-                  <p className="text-lg">
-                    {dict[`project${i + 1}` as keyof typeof dict]}
-                  </p>
-                  <LinkIcon className="w-4 h-4" />
-                </Link>
+                <p className="text-lg">
+                  {dict[`project${i + 1}` as keyof typeof dict]}
+                </p>
+                {dict[`link${i + 1}` as keyof typeof dict] && (
+                  <Link
+                    href={dict[`link${i + 1}` as keyof typeof dict]}
+                    className="flex items-center gap-1 hover:scale-105 duration-500 transition underline"
+                  >
+                    <p className="font-light">Link</p>
+                    <LinkIcon className="w-4 h-4" />
+                  </Link>
+                )}
                 {dict[`github${i + 1}` as keyof typeof dict] && (
                   <Link
                     href={dict[`github${i + 1}` as keyof typeof dict]}
                     className="flex items-center gap-1 hover:scale-105 duration-500 transition underline"
                   >
-                    <p className="text-lg">Github</p>
+                    <p className="font-light">Github</p>
                     <GithubIcon className="w-4 h-4" />
                   </Link>
                 )}
@@ -61,9 +64,18 @@ export default function Projects(props: ProjectsProps) {
               <p className="font-thin py-2 text-center md:text-start">
                 {dict[`desc${i + 1}` as keyof typeof dict]}
               </p>
-              <p className="text-xs font-light text-center md:text-start">
-                {dict[`stack${i + 1}` as keyof typeof dict]}
-              </p>
+              <div className="text-xs font-light justify-center md:justify-start flex flex-wrap gap-2">
+                {dict[`stack${i + 1}` as keyof typeof dict]
+                  ?.split(", ")
+                  .map((tech, i) => (
+                    <div
+                      key={`${tech}${i}`}
+                      className="border border-transparent bg-gradient-to-r from-cyan-500 to-slate-300 rounded-lg"
+                    >
+                      <div className="bg-slate-950 p-1 rounded-lg"> {tech}</div>
+                    </div>
+                  ))}
+              </div>
             </EnterAnimation>
           </div>
         ))}

@@ -99,6 +99,7 @@ export default function Contact(props: ContactProps) {
               <input
                 id="name"
                 name="name"
+                placeholder={dict.namePlaceholder}
                 type="text"
                 required
                 value={formData.name}
@@ -111,6 +112,7 @@ export default function Contact(props: ContactProps) {
               <input
                 id="email"
                 name="email"
+                placeholder={dict.emailPlaceholder}
                 type="email"
                 required
                 value={formData.email}
@@ -125,9 +127,10 @@ export default function Contact(props: ContactProps) {
               id="message"
               name="message"
               required
+              placeholder={dict.messagePlaceholder}
               value={formData.message}
               onChange={handleChange}
-              className="w-full border px-3 py-2 bg-slate-900 rounded"
+              className="w-full border px-3 py-2 bg-slate-900 rounded min-h-24"
             />
           </EnterAnimation>
           <EnterAnimation
@@ -161,6 +164,9 @@ const getDictionary = (locale: string) => {
       validate: "Uzupełnij formularz!",
       success: "Pomyślnie wysłano wiadomość!",
       error: "Błąd wysyłania wiadomości, spróbuj jeszcze raz!",
+      messagePlaceholder: "Napisz wiadomość...",
+      emailPlaceholder: "email@email.pl",
+      namePlaceholder: "Jan Kowalski",
     },
     "en-US": {
       contact: "Contact",
@@ -172,6 +178,9 @@ const getDictionary = (locale: string) => {
       validate: "Fill the form!",
       success: "Message sent!",
       error: "An error occurred. Please try again.",
+      messagePlaceholder: "Write a message...",
+      emailPlaceholder: "email@email.com",
+      namePlaceholder: "John Doe",
     },
   };
   return dictionaries[locale as AvailableLocalesType] ?? dictionaries["en-US"];
