@@ -71,7 +71,7 @@ const getDictionary = (locale: string) => {
       title1: "Full-stack developer",
       stack1:
         "React, Next.js, Tailwind CSS, Typescript, Node.js, CSS, HTML, JavaScript",
-      job1: "I added new features, improved performance, and maintained code quality. I introduced new translation, charts and theme systems. I worked on the reports and delegation module. I led a development project in next.js.",
+      job1: "I added new features, improved performance, and maintained code quality. I introduced new translations, charts and theme systems. I worked on the reports and delegation module. I led a development project in next.js.",
       time2: "July 2021 - December 2021",
       title2: "Game developer - freelance",
       stack2: "C#, Java, C++, Libgdx, Godot, SFML, MonoGame",

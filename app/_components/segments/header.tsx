@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { AvailableLocalesType } from "@/app/utils";
 import EnterAnimation from "../enterAnimation";
+import Link from "next/link";
 
 interface AboutMeProps {
   lang: string;
@@ -41,6 +42,28 @@ export default async function Header(props: AboutMeProps) {
             {dict.withExp}
           </p>
         </EnterAnimation>
+        <EnterAnimation isDefault className="py-2 flex gap-1">
+          <div className=" hover:scale-105 duration-500 transition border border-transparent bg-gradient-to-r from-cyan-500 to-slate-300 rounded-lg">
+            <a href="#contact-form">
+              <div className="bg-slate-950 rounded-lg p-1">{dict.contact}</div>
+            </a>
+          </div>
+          <div className=" hover:scale-105 duration-500 transition border border-transparent bg-gradient-to-r from-cyan-500 to-slate-300 rounded-lg">
+            <Link href="https://linkedin.com/in/piotr-stepien-2169bb223/">
+              <div className="bg-slate-950 rounded-lg p-1">{dict.linkedin}</div>
+            </Link>
+          </div>
+          <div className=" hover:scale-105 duration-500 transition border border-transparent bg-gradient-to-r from-cyan-500 to-slate-300 rounded-lg">
+            <Link href="https://github.com/stempelowaty">
+              <div className="bg-slate-950 rounded-lg p-1">{dict.github}</div>
+            </Link>
+          </div>
+          <div className=" hover:scale-105 duration-500 transition border border-transparent bg-gradient-to-r from-cyan-500 to-slate-300 rounded-lg">
+            <Link href="/CV_STEPIEN_EN.pdf" download>
+              <div className="bg-slate-950 rounded-lg p-1">{dict.resume}</div>
+            </Link>
+          </div>
+        </EnterAnimation>
       </div>
       <EnterAnimation
         initial={{ opacity: 0, x: 100, y: 0 }}
@@ -66,9 +89,17 @@ const getDictionary = (locale: string) => {
   const dictionaries = {
     "pl-PL": {
       withExp: "Z ponad trzyletnim doświadczeniem.",
+      contact: "Kontakt",
+      linkedin: "LinkedIn",
+      github: "Github",
+      resume: "CV",
     },
     "en-US": {
       withExp: "With over three years of experience.",
+      contact: "Contact",
+      linkedin: "LinkedIn",
+      github: "Github",
+      resume: "Resume",
     },
   };
   return dictionaries[locale as AvailableLocalesType] ?? dictionaries["en-US"];

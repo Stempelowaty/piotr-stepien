@@ -91,6 +91,7 @@ export default function Contact(props: ContactProps) {
         </div>
         <form
           onSubmit={handleSubmit}
+          id="contact-form"
           className="space-y-4 font-lexend w-full md:w-1/2"
         >
           <div className="flex gap-2">

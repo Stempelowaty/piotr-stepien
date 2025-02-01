@@ -21,7 +21,7 @@ export default function EnterAnimation(props: EnterAnimationProps) {
           whileInView={{ opacity: 1, x: 0, y: 0 }}
           transition={{ type: "spring", stiffness: 100 }}
           viewport={{ once: true, amount: 0.5 }}
-          className={cn("overflow-hidden", className)}
+          className={className}
           {...motionDivProps}
         >
           {children}
