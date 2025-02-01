@@ -2,6 +2,7 @@
 import { AvailableLocalesType } from "@/app/utils";
 import EnterAnimation from "../enterAnimation";
 import { useState } from "react";
+import Link from "next/link";
 
 interface ContactProps {
   lang: string;
@@ -59,61 +60,91 @@ export default function Contact(props: ContactProps) {
           {dict.contact}
         </h1>
       </EnterAnimation>
-      <form
-        onSubmit={handleSubmit}
-        className="space-y-4 font-lexend border p-4 rounded-lg my-16"
-      >
-        <div className="flex gap-2">
-          <EnterAnimation isDefault className="w-1/2">
-            <label htmlFor="name">{dict.name}</label>
-            <input
-              id="name"
-              name="name"
-              type="text"
-              required
-              value={formData.name}
-              onChange={handleChange}
-              className="w-full border px-3 py-2 bg-slate-900 rounded"
-            />
+      <div className="w-full flex flex-col md:flex-row items-center justify-center gap-4 my-16">
+        <div className="w-full md:w-1/2 text-center md:text-left">
+          <EnterAnimation isDefault>
+            <p className="w-full">Github</p>
+            <Link
+              href={"https://github.com/Stempelowaty"}
+              className="font-thin underline"
+            >
+              <p className="hover:scale-105 transition duration-500">
+                github.com/Stempelowaty
+              </p>
+            </Link>
           </EnterAnimation>
-          <EnterAnimation isDefault className="w-1/2">
-            <label htmlFor="email">{dict.email}</label>
-            <input
-              id="email"
-              name="email"
-              type="email"
-              required
-              value={formData.email}
-              onChange={handleChange}
-              className="w-full border px-3 py-2 bg-slate-900 rounded"
-            />
+          <EnterAnimation isDefault>
+            <p className="w-full">Linkedin</p>
+            <Link
+              href="https://linkedin.com/in/piotr-stepien-2169bb223/"
+              className="font-thin underline"
+            >
+              <p className="hover:scale-105 transition duration-500">
+                linkedin.com/in/piotr-stepien-2169bb223
+              </p>
+            </Link>
+          </EnterAnimation>
+          <EnterAnimation isDefault>
+            <p className="w-full">Email</p>
+            <p className="font-thin">pi.ad.stepien@gmail.com</p>
           </EnterAnimation>
         </div>
-        <EnterAnimation isDefault>
-          <label htmlFor="message">{dict.message}</label>
-          <textarea
-            id="message"
-            name="message"
-            required
-            value={formData.message}
-            onChange={handleChange}
-            className="w-full border px-3 py-2 bg-slate-900 rounded"
-          />
-        </EnterAnimation>
-        <EnterAnimation
-          isDefault
-          className="flex flex-col items-center justify-center gap-2"
+        <form
+          onSubmit={handleSubmit}
+          className="space-y-4 font-lexend w-full md:w-1/2"
         >
-          <button
-            type="submit"
-            disabled={!!status}
-            className="bg-gradient-to-br text-slate-950 from-cyan-500 via-cyan-200 to-slate-300 px-4 py-2 rounded-lg hover:scale-105 transition duration-500"
+          <div className="flex gap-2">
+            <EnterAnimation isDefault className="w-1/2">
+              <label htmlFor="name">{dict.name}</label>
+              <input
+                id="name"
+                name="name"
+                type="text"
+                required
+                value={formData.name}
+                onChange={handleChange}
+                className="w-full border px-3 py-2 bg-slate-900 rounded"
+              />
+            </EnterAnimation>
+            <EnterAnimation isDefault className="w-1/2">
+              <label htmlFor="email">{dict.email}</label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                required
+                value={formData.email}
+                onChange={handleChange}
+                className="w-full border px-3 py-2 bg-slate-900 rounded"
+              />
+            </EnterAnimation>
+          </div>
+          <EnterAnimation isDefault>
+            <label htmlFor="message">{dict.message}</label>
+            <textarea
+              id="message"
+              name="message"
+              required
+              value={formData.message}
+              onChange={handleChange}
+              className="w-full border px-3 py-2 bg-slate-900 rounded"
+            />
+          </EnterAnimation>
+          <EnterAnimation
+            isDefault
+            className="flex flex-col md:flex-row md:justify-start items-center justify-center gap-2"
           >
-            {dict.send}
-          </button>
-          <p className="font-thin h-12">{status}</p>
-        </EnterAnimation>
-      </form>
+            <button
+              type="submit"
+              disabled={!!status}
+              className="bg-gradient-to-br text-slate-950 from-cyan-500 via-cyan-200 to-slate-300 px-4 py-2 rounded-lg hover:scale-105 transition duration-500"
+            >
+              {dict.send}
+            </button>
+            <p className="font-thin h-12 flex items-center">{status}</p>
+          </EnterAnimation>
+        </form>
+      </div>
     </div>
   );
 }
