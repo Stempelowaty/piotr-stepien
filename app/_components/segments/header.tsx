@@ -42,7 +42,12 @@ export default async function Header(props: AboutMeProps) {
             {dict.withExp}
           </p>
         </EnterAnimation>
-        <EnterAnimation isDefault className="py-2 flex gap-1">
+        <EnterAnimation
+          initial={{ opacity: 0, x: -100, y: 0 }}
+          whileInView={{ opacity: 1, x: 0, y: 0 }}
+          transition={{ ease: "easeOut", duration: 0.75, delay: 1 }}
+          className="py-2 flex gap-1"
+        >
           <div className=" hover:scale-105 duration-500 transition border border-transparent bg-gradient-to-r from-cyan-500 to-slate-300 rounded-lg">
             <a href="#contact-form">
               <div className="bg-slate-950 rounded-lg p-1">{dict.contact}</div>
