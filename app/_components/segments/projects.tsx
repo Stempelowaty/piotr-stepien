@@ -58,7 +58,7 @@ export default function Projects(props: ProjectsProps) {
                   </Link>
                 )}
               </div>
-              <p className="font-light py-2 text-center md:text-start">
+              <p className="font-thin py-2 text-center md:text-start">
                 {dict[`desc${i + 1}` as keyof typeof dict]}
               </p>
               <p className="text-xs font-light text-center md:text-start">
