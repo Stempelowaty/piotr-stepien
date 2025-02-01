@@ -30,6 +30,7 @@ export default function Projects(props: ProjectsProps) {
                 width={640}
                 height={400}
                 src={`/projects/p${i + 1}.png`}
+                className="rounded-lg"
                 alt=""
               />
             </EnterAnimation>
