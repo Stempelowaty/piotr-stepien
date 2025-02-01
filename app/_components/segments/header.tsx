@@ -9,8 +9,8 @@ export default async function Header(props: AboutMeProps) {
   const { lang } = await props;
   const dict = getDictionary(lang);
   return (
-    <div className="flex lg:flex-row flex-col-reverse px-32 pt-32 font-outfit">
-      <div className="flex flex-col lg:w-1/2 py-32 items-center lg:items-start w-full">
+    <div className="flex lg:flex-row flex-col-reverse py-32 font-outfit  px-8 md:px-32 xl:px-64">
+      <div className="flex flex-col lg:w-1/2 items-center lg:items-start w-full">
         <EnterAnimation
           initial={{ opacity: 0, x: -100, y: 0 }}
           whileInView={{ opacity: 1, x: 0, y: 0 }}

@@ -8,14 +8,14 @@ export default function AboutMe(props: AboutMeProps) {
   const dict = getDictionary(props.lang);
 
   return (
-    <div className="font-lexend text-foreground flex flex-col items-center mt-16 lg:mt-96 px-8 md:px-32 xl:px-64">
+    <div className="font-lexend text-foreground flex flex-col items-center mt-16 px-8 md:px-32 xl:px-64">
       <EnterAnimation isDefault>
         <h1 className="bg-gradient-to-r from-cyan-300 to-white bg-clip-text text-transparent text-4xl pt-16">
           {dict.about}
         </h1>
       </EnterAnimation>
       <EnterAnimation isDefault>
-        <h2 className="text-2xl font-thin">{dict.chapterTitle}</h2>
+        <h2 className="text-2xl font-thin text-center">{dict.chapterTitle}</h2>
       </EnterAnimation>
       <EnterAnimation isDefault>
         <div className="text-center flex flex-col items-center">
