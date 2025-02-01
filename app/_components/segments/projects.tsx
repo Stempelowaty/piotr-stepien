@@ -18,10 +18,13 @@ export default function Projects(props: ProjectsProps) {
       </EnterAnimation>
       <div className="flex w-full flex-col items-center gap-16 mt-8">
         {Array.from(Array(5).keys()).map((i) => (
-          <div key={i} className="w-full flex justify-center">
+          <div
+            key={i}
+            className="w-full flex flex-col md:flex-row items-center justify-center gap-4"
+          >
             <EnterAnimation
               horizontal={i % 2 == 0 ? "toRight" : "toLeft"}
-              className="h-40 w-64 flex items-center justify-center"
+              className="md:h-40 md:w-64 w-full flex items-center justify-center"
             >
               <Image
                 width={640}
@@ -32,12 +35,12 @@ export default function Projects(props: ProjectsProps) {
             </EnterAnimation>
             <EnterAnimation
               horizontal={i % 2 == 0 ? "toRight" : "toLeft"}
-              className="w-full pl-8"
+              className="w-full"
             >
-              <div className="flex gap-4">
+              <div className="flex gap-4 flex-col md:flex-row items-center justify-center md:justify-start">
                 <Link
                   href={dict[`link${i + 1}` as keyof typeof dict]}
-                  className="flex items-center gap-1 hover:scale-105 duration-500 transition"
+                  className="flex items-center gap-1 hover:scale-105 duration-500 transition underline"
                 >
                   <p className="text-lg">
                     {dict[`project${i + 1}` as keyof typeof dict]}
@@ -47,17 +50,17 @@ export default function Projects(props: ProjectsProps) {
                 {dict[`github${i + 1}` as keyof typeof dict] && (
                   <Link
                     href={dict[`github${i + 1}` as keyof typeof dict]}
-                    className="flex items-center gap-1 hover:scale-105 duration-500 transition"
+                    className="flex items-center gap-1 hover:scale-105 duration-500 transition underline"
                   >
                     <p className="text-lg">Github</p>
                     <GithubIcon className="w-4 h-4" />
                   </Link>
                 )}
               </div>
-              <p className="font-light py-2">
+              <p className="font-light py-2 text-center md:text-start">
                 {dict[`desc${i + 1}` as keyof typeof dict]}
               </p>
-              <p className="text-xs font-light">
+              <p className="text-xs font-light text-center md:text-start">
                 {dict[`stack${i + 1}` as keyof typeof dict]}
               </p>
             </EnterAnimation>
@@ -74,7 +77,7 @@ const getDictionary = (locale: string) => {
       projects: "Moje projekty",
       project1: "System bankowy",
       desc1:
-        "Dołączyłem do projektu Business Zone w 2024 roku. System oferuje szeroką gamę usług bankowych, w tym zarządzanie kontem, planowanie budżetu, zarządzanie dostawcami, przetwarzanie zamówień i zarządzanie zasobami ludzkimi. System jest przeznaczony do użytku przez klientów korporacyjnych.",
+        "Dołączyłem do projektu Business Zone w 2024 roku. System oferuje szeroką gamę usług bankowych, w tym zarządzanie kontami, planowanie budżetu, zarządzanie dostawcami, przetwarzanie zamówień i zarządzanie zasobami ludzkimi. System jest przeznaczony do użytku przez klientów korporacyjnych.",
       stack1: "Outsystems, SQL, JavaScript",
       project2: "System zarządzania pracownikami",
       desc2:
@@ -88,7 +91,7 @@ const getDictionary = (locale: string) => {
         "React, Next.js, Tailwind CSS, Typescript, Next.js, CSS, HTML, JavaScript, Git",
       project4: "Zarządzanie notatkami RPG",
       desc4:
-        "Aplikacja stworzona przez dwie osoby, która powstała w projekcie rozwojowym. Aplikacja ma pomóc graczom w zarządzaniu notatkami i postaciami w grach RPG. Projekt jest obecnie wstrzymany",
+        "Aplikacja stworzona przez dwie osoby, która powstała w projekcie rozwojowym. Aplikacja ma pomóc graczom w zarządzaniu notatkami i postaciami w grach RPG. Projekt jest obecnie wstrzymany.",
       stack4: "T3C Stack, Nextjs, Drizzle, NextAuth, OAuth, Git",
       project5: "Gazetowe portfolio",
       desc5:

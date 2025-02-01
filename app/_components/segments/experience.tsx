@@ -9,29 +9,41 @@ export default function Experience(props: ExperienceProps) {
   return (
     <div className="font-lexend text-foreground flex flex-col items-center py-32 px-8 md:px-32 xl:px-64">
       <EnterAnimation isDefault>
-        <h1 className="bg-gradient-to-r from-cyan-300 to-white bg-clip-text text-transparent text-4xl pt-16">
+        <h1 className="bg-gradient-to-r text-center from-cyan-300 to-white bg-clip-text text-transparent text-4xl pt-16">
           {dict.experience}
         </h1>
       </EnterAnimation>
       <div className="flex w-full flex-col items-center gap-16 mt-8">
-        <div className="w-full flex justify-between gap-8">
-          <EnterAnimation horizontal="toLeft" className="w-1/2">
-            <p className="text-end font-thin text-lg">{dict.time1}</p>
+        <div className="w-full flex md:flex-row flex-col justify-between gap-8">
+          <EnterAnimation horizontal="toLeft" className="md:w-1/2 w-full">
+            <p className="md:text-end text-center font-thin text-lg">
+              {dict.time1}
+            </p>
           </EnterAnimation>
-          <EnterAnimation horizontal="toRight" className="w-1/2">
-            <p className="text-lg">{dict.title1}</p>
-            <p className="font-light py-2">{dict.job1}</p>
-            <p className="text-xs font-light">{dict.stack1}</p>
+          <EnterAnimation horizontal="toRight" className="md:w-1/2 w-full">
+            <p className="text-lg text-center md:text-start">{dict.title1}</p>
+            <p className="font-light py-2 text-center md:text-start">
+              {dict.job1}
+            </p>
+            <p className="text-xs font-light text-center md:text-start">
+              {dict.stack1}
+            </p>
           </EnterAnimation>
         </div>
-        <div className="w-full flex justify-between gap-8">
-          <EnterAnimation horizontal="toLeft" className="w-1/2">
-            <p className="text-end font-thin text-lg">{dict.time2}</p>
+        <div className="w-full flex md:flex-row flex-col justify-between gap-8">
+          <EnterAnimation horizontal="toLeft" className="md:w-1/2 w-full">
+            <p className="md:text-end text-center font-thin text-lg">
+              {dict.time2}
+            </p>
           </EnterAnimation>
-          <EnterAnimation horizontal="toRight" className="w-1/2">
-            <p className="text-lg">{dict.title2}</p>
-            <p className="font-light py-2">{dict.job2}</p>
-            <p className="text-xs font-light">{dict.stack2}</p>
+          <EnterAnimation horizontal="toRight" className="md:w-1/2 w-full">
+            <p className="text-lg text-center md:text-start">{dict.title2}</p>
+            <p className="font-light py-2 text-center md:text-start">
+              {dict.job2}
+            </p>
+            <p className="text-xs font-light text-center md:text-start">
+              {dict.stack2}
+            </p>
           </EnterAnimation>
         </div>
       </div>

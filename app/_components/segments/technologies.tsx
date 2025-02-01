@@ -23,7 +23,6 @@ export default function Technologies(props: TechnologiesProps) {
             transition={{
               type: "spring",
               stiffness: 100,
-              delay: i / 10,
             }}
             viewport={{ once: true, amount: 0.5 }}
           >
