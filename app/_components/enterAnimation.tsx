@@ -1,6 +1,5 @@
 "use client";
 import { motion, AnimatePresence, type HTMLMotionProps } from "framer-motion";
-import { cn } from "@/app/utils";
 
 interface EnterAnimationProps extends HTMLMotionProps<"div"> {
   className?: string;
