@@ -45,7 +45,7 @@ export default async function Header(props: AboutMeProps) {
           initial={{ opacity: 0, x: -100, y: 0 }}
           whileInView={{ opacity: 1, x: 0, y: 0 }}
           transition={{ ease: "easeOut", duration: 0.75, delay: 1 }}
-          className="py-2 flex gap-1"
+          className="py-2 flex gap-2"
         >
           <div className=" hover:scale-105 duration-500 transition border border-transparent bg-gradient-to-r from-cyan-500 to-rose-100 rounded-lg">
             <a href="#contact-form">

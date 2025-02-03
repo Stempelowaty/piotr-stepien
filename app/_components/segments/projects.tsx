@@ -38,7 +38,7 @@ export default function Projects(props: ProjectsProps) {
               horizontal={i % 2 == 0 ? "toRight" : "toLeft"}
               className="w-full"
             >
-              <div className="flex gap-4 flex-col md:flex-row items-center justify-center md:justify-start">
+              <div className="flex gap-1 flex-col md:flex-row items-center justify-center md:justify-start">
                 <p className="text-lg">
                   {dict[`project${i + 1}` as keyof typeof dict]}
                 </p>
