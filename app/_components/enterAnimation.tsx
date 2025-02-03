@@ -40,7 +40,7 @@ export default function EnterAnimation(props: EnterAnimationProps) {
           }}
           transition={{ type: "spring", stiffness: 100 }}
           viewport={{ once: true, amount: 0.5 }}
-          className={cn("overflow-hidden", className)}
+          className={className}
           {...motionDivProps}
         >
           {children}

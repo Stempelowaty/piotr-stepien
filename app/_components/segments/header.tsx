@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { AvailableLocalesType } from "@/app/utils";
 import EnterAnimation from "../enterAnimation";
 import Link from "next/link";
@@ -48,44 +47,28 @@ export default async function Header(props: AboutMeProps) {
           transition={{ ease: "easeOut", duration: 0.75, delay: 1 }}
           className="py-2 flex gap-1"
         >
-          <div className=" hover:scale-105 duration-500 transition border border-transparent bg-gradient-to-r from-cyan-500 to-slate-300 rounded-lg">
+          <div className=" hover:scale-105 duration-500 transition border border-transparent bg-gradient-to-r from-cyan-500 to-rose-100 rounded-lg">
             <a href="#contact-form">
               <div className="bg-slate-950 rounded-lg p-1">{dict.contact}</div>
             </a>
           </div>
-          <div className=" hover:scale-105 duration-500 transition border border-transparent bg-gradient-to-r from-cyan-500 to-slate-300 rounded-lg">
+          <div className=" hover:scale-105 duration-500 transition border border-transparent bg-gradient-to-r from-cyan-500 to-rose-100 rounded-lg">
             <Link href="https://linkedin.com/in/piotr-stepien-2169bb223/">
               <div className="bg-slate-950 rounded-lg p-1">{dict.linkedin}</div>
             </Link>
           </div>
-          <div className=" hover:scale-105 duration-500 transition border border-transparent bg-gradient-to-r from-cyan-500 to-slate-300 rounded-lg">
+          <div className=" hover:scale-105 duration-500 transition border border-transparent bg-gradient-to-r from-cyan-500 to-rose-100 rounded-lg">
             <Link href="https://github.com/stempelowaty">
               <div className="bg-slate-950 rounded-lg p-1">{dict.github}</div>
             </Link>
           </div>
-          <div className=" hover:scale-105 duration-500 transition border border-transparent bg-gradient-to-r from-cyan-500 to-slate-300 rounded-lg">
+          <div className=" hover:scale-105 duration-500 transition border border-transparent bg-gradient-to-r from-cyan-500 to-rose-100 rounded-lg">
             <Link href="/CV_STEPIEN_EN.pdf" download>
               <div className="bg-slate-950 rounded-lg p-1">{dict.resume}</div>
             </Link>
           </div>
         </EnterAnimation>
       </div>
-      <EnterAnimation
-        initial={{ opacity: 0, x: 100, y: 0 }}
-        whileInView={{ opacity: 1, x: 0, y: 0 }}
-        transition={{ ease: "easeOut", duration: 0.75 }}
-        className="flex justify-center items-center lg:w-1/2 w-full"
-      >
-        <div className="aspect-square w-full max-w-[600px] rounded-full p-1 bg-gradient-to-br from-cyan-500 via-cyan-200 to-slate-300">
-          <Image
-            className="rounded-full z-100 w-full "
-            width={343}
-            height={343}
-            src={"/profile_pic.png"}
-            alt=""
-          />
-        </div>
-      </EnterAnimation>
     </div>
   );
 }

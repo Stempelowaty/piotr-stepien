@@ -25,7 +25,9 @@ export default function BgGradient() {
           linear-gradient(to bottom, rgba(255, 255, 255, 0.07), transparent 70%), 
           linear-gradient(to top, rgba(2, 6, 24, 1), transparent 70%), 
           repeating-linear-gradient(0deg, transparent, transparent 63px, rgba(255, 255, 255, 0.05) 64px),
-          repeating-linear-gradient(90deg, transparent, transparent 63px, rgba(255, 255, 255, 0.05) 64px), #020618
+          repeating-linear-gradient(90deg, transparent, transparent 63px, rgba(255, 255, 255, 0.05) 64px),
+          radial-gradient(circle at right, rgba(244, 63, 94, 0.3), transparent 50%),
+          #020618
         `,
       }}
     ></div>
