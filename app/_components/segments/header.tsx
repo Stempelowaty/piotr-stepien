@@ -63,9 +63,9 @@ export default async function Header(props: AboutMeProps) {
             </Link>
           </div>
           <div className=" hover:scale-105 duration-500 transition border border-transparent bg-gradient-to-r from-cyan-500 to-rose-100 rounded-lg">
-            <Link href="/CV_STEPIEN_EN.pdf" download>
+            <a href="/CV_STEPIEN_EN.pdf" download>
               <div className="bg-slate-950 rounded-lg p-1">{dict.resume}</div>
-            </Link>
+            </a>
           </div>
         </EnterAnimation>
       </div>
